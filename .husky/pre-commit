@@ -3,4 +3,4 @@
 
 yarn prettier:fix
 yarn prettier:check
-yarn eslint:fix
+yarn lint:fix

@@ -7,12 +7,12 @@ import { Colors } from './styles/colors'
 import GlobalStyle from './styles/global'
 
 const App = () => {
-  return (
-    <>
-      <GlobalStyle />
-      <MainRoutes />
-    </>
-  )
+    return (
+        <>
+            <GlobalStyle />
+            <MainRoutes />
+        </>
+    )
 }
 
 export default App
