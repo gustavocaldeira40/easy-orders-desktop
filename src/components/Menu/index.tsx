@@ -3,61 +3,61 @@ import React, { useContext, useState } from 'react'
 import { Container, ContainerSelected, ItemActive } from './style'
 
 const Menu: React.FC = () => {
-  /*
-   *   CONTEXT
-   */
+    /*
+     *   CONTEXT
+     */
 
-  const { options, setOptions } = useContext(DataContext)
+    const { options, setOptions } = useContext(DataContext)
 
-  /*
-   *   REFS
-   */
+    /*
+     *   REFS
+     */
 
-  /*
-   *   STATES
-   */
+    /*
+     *   STATES
+     */
 
-  /*
-   *   HOOKS
-   */
+    /*
+     *   HOOKS
+     */
 
-  /*
-   *   LAYOUT
-   */
+    /*
+     *   LAYOUT
+     */
 
-  /*
-   *   FORMIK
-   */
+    /*
+     *   FORMIK
+     */
 
-  /*
-   *   FUNCTIONS
-   */
+    /*
+     *   FUNCTIONS
+     */
 
-  /*
-   *   EFFECTS
-   */
+    /*
+     *   EFFECTS
+     */
 
-  return (
-    <Container>
-      <ContainerSelected
-        onClick={() => setOptions({ selected: 'clients' })}
-        isActive={options.selected === 'clients'}
-      >
-        <ItemActive isActive={options.selected === 'clients'}>
-          Clients
-        </ItemActive>
-      </ContainerSelected>
+    return (
+        <Container>
+            <ContainerSelected
+                onClick={() => setOptions({ selected: 'clients' })}
+                isActive={options.selected === 'clients'}
+            >
+                <ItemActive isActive={options.selected === 'clients'}>
+                    Clients
+                </ItemActive>
+            </ContainerSelected>
 
-      <ContainerSelected
-        onClick={() => setOptions({ selected: 'sales' })}
-        isActive={options.selected === 'sales'}
-      >
-        <ItemActive isActive={options.selected === 'sales'}>
-          Sales Orders
-        </ItemActive>
-      </ContainerSelected>
-    </Container>
-  )
+            <ContainerSelected
+                onClick={() => setOptions({ selected: 'sales' })}
+                isActive={options.selected === 'sales'}
+            >
+                <ItemActive isActive={options.selected === 'sales'}>
+                    Sales Orders
+                </ItemActive>
+            </ContainerSelected>
+        </Container>
+    )
 }
 
 export default Menu

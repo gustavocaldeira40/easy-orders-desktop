@@ -2,56 +2,56 @@ import React, { createContext, useState } from 'react'
 import ChildrenProps from 'types/children'
 
 type DataContextType = {
-  options: MenuProps
-  setOptions: React.Dispatch<React.SetStateAction<MenuProps>>
+    options: MenuProps
+    setOptions: React.Dispatch<React.SetStateAction<MenuProps>>
 }
 
 type MenuProps = {
-  selected: 'clients' | 'sales'
+    selected: 'clients' | 'sales'
 }
 
 export const DataContext = createContext({} as DataContextType)
 
 const AppContext: React.FC<ChildrenProps> = ({ children }) => {
-  /*
-   *   CONTEXT
-   */
+    /*
+     *   CONTEXT
+     */
 
-  /*
-   *   REFS
-   */
+    /*
+     *   REFS
+     */
 
-  /*
-   *   STATES
-   */
+    /*
+     *   STATES
+     */
 
-  const [options, setOptions] = useState<MenuProps>({ selected: 'clients' })
+    const [options, setOptions] = useState<MenuProps>({ selected: 'clients' })
 
-  /*
-   *   HOOKS
-   */
+    /*
+     *   HOOKS
+     */
 
-  /*
-   *   LAYOUT
-   */
+    /*
+     *   LAYOUT
+     */
 
-  /*
-   *   FORMIK
-   */
+    /*
+     *   FORMIK
+     */
 
-  /*
-   *   FUNCTIONS
-   */
+    /*
+     *   FUNCTIONS
+     */
 
-  /*
-   *   EFFECTS
-   */
+    /*
+     *   EFFECTS
+     */
 
-  return (
-    <DataContext.Provider value={{ options, setOptions }}>
-      {children}
-    </DataContext.Provider>
-  )
+    return (
+        <DataContext.Provider value={{ options, setOptions }}>
+            {children}
+        </DataContext.Provider>
+    )
 }
 
 export default AppContext

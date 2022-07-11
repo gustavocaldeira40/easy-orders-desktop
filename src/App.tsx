@@ -5,12 +5,12 @@ import { Colors } from './styles/colors'
 import GlobalStyle from './styles/global'
 
 const App = () => {
-  return (
-    <AppContext>
-      <GlobalStyle />
-      <MainRoutes />
-    </AppContext>
-  )
+    return (
+        <AppContext>
+            <GlobalStyle />
+            <MainRoutes />
+        </AppContext>
+    )
 }
 
 export default App
