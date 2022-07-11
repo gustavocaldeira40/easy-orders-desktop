@@ -7,6 +7,10 @@ import BGScreen from 'assets/images/bg-lines.png'
 
 const { Text, Title } = Typography
 
+export const Separator = styled(Col)`
+    height: 30px;
+`
+
 export const Container = styled(Col)`
     background-image: url(${BGScreen});
     background-position: center;
