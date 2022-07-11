@@ -2,64 +2,64 @@ import React, { useState } from 'react'
 import { Container, ContainerSelected, ItemActive } from './style'
 
 type MenuProps = {
-  selects: 'clients' | 'sales'
+    selects: 'clients' | 'sales'
 }
 
 const Menu: React.FC = () => {
-  /*
-   *   CONTEXT
-   */
+    /*
+     *   CONTEXT
+     */
 
-  /*
-   *   REFS
-   */
+    /*
+     *   REFS
+     */
 
-  /*
-   *   STATES
-   */
+    /*
+     *   STATES
+     */
 
-  /*
-   *   HOOKS
-   */
+    /*
+     *   HOOKS
+     */
 
-  /*
-   *   LAYOUT
-   */
+    /*
+     *   LAYOUT
+     */
 
-  /*
-   *   FORMIK
-   */
+    /*
+     *   FORMIK
+     */
 
-  /*
-   *   FUNCTIONS
-   */
-  const [options, setOptions] = useState<MenuProps>({ selects: 'clients' })
+    /*
+     *   FUNCTIONS
+     */
+    const [options, setOptions] = useState<MenuProps>({ selects: 'clients' })
 
-  /*
-   *   EFFECTS
-   */
+    /*
+     *   EFFECTS
+     */
 
-  return (
-    <Container>
-      <ContainerSelected
-        onClick={() => setOptions({ selects: 'clients' })}
-        isActive={options.selects === 'clients'}
-      >
-        <ItemActive isActive={options.selects === 'clients'}>
-          Clients
-        </ItemActive>
-      </ContainerSelected>
+    return (
+        <Container>
+            <ContainerSelected
+                onClick={() => setOptions({ selects: 'clients' })}
+                isActive={options.selects === 'clients'}
+            >
+                <ItemActive isActive={options.selects === 'clients'}>
+                    Clients
+                </ItemActive>
+            </ContainerSelected>
 
-      <ContainerSelected
-        onClick={() => setOptions({ selects: 'sales' })}
-        isActive={options.selects === 'sales'}
-      >
-        <ItemActive isActive={options.selects === 'sales'}>
-          Sales Orders
-        </ItemActive>
-      </ContainerSelected>
-    </Container>
-  )
+            <ContainerSelected
+                onClick={() => setOptions({ selects: 'sales' })}
+                isActive={options.selects === 'sales'}
+            >
+                <ItemActive isActive={options.selects === 'sales'}>
+                    Sales Orders
+                </ItemActive>
+            </ContainerSelected>
+        </Container>
+    )
 }
 
 export default Menu
