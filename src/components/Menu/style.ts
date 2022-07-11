@@ -14,6 +14,7 @@ export const Container = styled(Col)`
     align-items: center;
     padding: 5px;
     align-self: center;
+    margin: 10px 0;
 `
 
 export const ContainerSelected = styled(Col)<any>`

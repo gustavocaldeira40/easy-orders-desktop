@@ -136,7 +136,7 @@ export const ContainerRight = styled(Col)`
 `
 
 export const ImageRight = styled.img`
-    width: 70%;
+    width: 67%;
     max-width: 100%;
     height: auto;
 `

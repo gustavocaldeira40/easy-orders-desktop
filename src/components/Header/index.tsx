@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import Logo from 'assets/visual/easy-orders.png'
 import { HeaderProps } from 'types/header'
 import AvatarExample from 'assets/images/avatar-example.png'
-import SearchIcon from 'assets/images/search.png'
-import CloseIcon from 'assets/images/close.png'
+import SearchIcon from 'assets/icons/search.png'
+import CloseIcon from 'assets/icons/close.png'
 import {
     Container,
     ContainerGeneral,
