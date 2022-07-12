@@ -16,7 +16,7 @@ export const ContainerTextClose = styled(Col)`
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;
-    padding: 20px;
+    padding: 30px 20px;
 `
 
 export const TextClose = styled(Text)`
@@ -32,6 +32,11 @@ export const ContainerItem = styled(Col)`
     padding: 20px;
 
     cursor: pointer;
+
+    &:hover {
+        background: ${Colors.bgInput};
+        border-radius: 0px 0px 25px 0px;
+    }
 `
 
 export const ContainerTextItem = styled(Col)`

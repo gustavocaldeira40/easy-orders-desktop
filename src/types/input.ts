@@ -8,4 +8,8 @@ export interface InputValuesProps extends InputProps {
     isPassword?: boolean
     errorMessage: any
     isCheck?: boolean
+    width?: string | number
+    isInputNumber?: boolean
+    maxLength?: number
+    withMB?: string | number
 }

@@ -16,6 +16,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-floating-label-input": "^4.3.4",
+        "react-input-mask": "^2.0.4",
         "react-modern-drawer": "^1.1.1",
         "react-router-dom": "^6.3.0",
         "react-scripts": "5.0.1",
@@ -54,6 +55,7 @@
         ]
     },
     "devDependencies": {
+        "@types/react-input-mask": "^3.0.1",
         "@types/styled-components": "^5.1.25",
         "@typescript-eslint/eslint-plugin": "^5.30.5",
         "@typescript-eslint/parser": "^5.30.5",
