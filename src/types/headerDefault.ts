@@ -3,4 +3,5 @@ export interface HeaderDefaultProps {
     setShowInformation: React.Dispatch<boolean>
     titleMain: string
     withMenu?: boolean
+    fontSize?: string | number
 }

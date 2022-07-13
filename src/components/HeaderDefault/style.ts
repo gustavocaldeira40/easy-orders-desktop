@@ -15,11 +15,13 @@ export const ContainerTitle = styled(Col)`
     padding: 0 20px 0;
 `
 
-export const TitleScreen = styled(Title)`
+export const TitleScreen = styled(Title)<any>`
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     flex: 1;
     text-align: center;
+    /* font-size: x-large; */
+    font-size: ${(props) => (props.fontSize ? props.fontSize : '2em')};
     color: ${Colors.white};
 `
 
