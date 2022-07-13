@@ -12,6 +12,7 @@ export const Colors = {
 
     bgInput: 'rgba(79, 79, 79, 0.2)',
     bgButton: '#0e0f12',
+    bgButtonSecondary: '#4A0459',
 
     success: '#65E04D',
     error: '#D23434',

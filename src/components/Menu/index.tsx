@@ -1,63 +1,94 @@
+import LinkComponent from 'components/Link'
 import { DataContext } from 'context/appContext'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Container, ContainerSelected, ItemActive } from './style'
 
+const styleDefault = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}
+
 const Menu: React.FC = () => {
-    /*
-     *   CONTEXT
-     */
+  /*
+   *   CONTEXT
+   */
 
-    const { options, setOptions } = useContext(DataContext)
+  const { options, setOptions } = useContext(DataContext)
 
-    /*
-     *   REFS
-     */
+  /*
+   *   REFS
+   */
 
-    /*
-     *   STATES
-     */
+  /*
+   *   STATES
+   */
 
-    /*
-     *   HOOKS
-     */
+  /*
+   *   HOOKS
+   */
+  const navigate = useNavigate()
+  const location = useLocation()
 
-    /*
-     *   LAYOUT
-     */
+  /*
+   *   LAYOUT
+   */
 
-    /*
-     *   FORMIK
-     */
+  /*
+   *   FORMIK
+   */
 
-    /*
-     *   FUNCTIONS
-     */
+  /*
+   *   FUNCTIONS
+   */
 
-    /*
-     *   EFFECTS
-     */
+  /*
+   *   EFFECTS
+   */
 
-    return (
-        <Container>
-            <ContainerSelected
-                onClick={() => setOptions({ selected: 'clients' })}
-                isActive={options.selected === 'clients'}
-            >
-                <ItemActive isActive={options.selected === 'clients'}>
-                    Clients
-                </ItemActive>
-            </ContainerSelected>
+  useEffect(() => {
+    const pathActually = location.pathname
 
-            <ContainerSelected
-                onClick={() => setOptions({ selected: 'sales' })}
-                isActive={options.selected === 'sales'}
-            >
-                <ItemActive isActive={options.selected === 'sales'}>
-                    Sales Orders
-                </ItemActive>
-            </ContainerSelected>
-        </Container>
-    )
+    if (pathActually) {
+      if (pathActually === '/clients') {
+        setOptions({ ...options, selected: 'clients' })
+      } else {
+        setOptions({ ...options, selected: 'sales' })
+      }
+    }
+  }, [])
+
+  return (
+    <Container>
+      <ContainerSelected
+        onClick={() => {
+          setOptions({ selected: 'clients' })
+          navigate('/clients')
+        }}
+        isActive={options.selected === 'clients'}
+      >
+        {/* <LinkComponent style={styleDefault} path="/clients"> */}
+        <ItemActive isActive={options.selected === 'clients'}>
+          Clients
+        </ItemActive>
+        {/* </LinkComponent> */}
+      </ContainerSelected>
+      <ContainerSelected
+        onClick={() => {
+          setOptions({ selected: 'sales' })
+          navigate('/sales-orders')
+        }}
+        isActive={options.selected === 'sales'}
+      >
+        {/* <LinkComponent style={styleDefault} path="/sales-orders"> */}
+        <ItemActive isActive={options.selected === 'sales'}>
+          Sales Orders
+        </ItemActive>
+        {/* </LinkComponent> */}
+      </ContainerSelected>
+    </Container>
+  )
 }
 
 export default Menu

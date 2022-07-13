@@ -12,4 +12,5 @@ export interface InputValuesProps extends InputProps {
     isInputNumber?: boolean
     maxLength?: number
     withMB?: string | number
+    withoutMB?: boolean
 }

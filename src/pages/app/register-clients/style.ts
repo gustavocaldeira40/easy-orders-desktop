@@ -60,6 +60,7 @@ export const ContainerAddress = styled(Col)`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 `
 
 export const IconAddress = styled.img`
@@ -89,3 +90,14 @@ export const Icon = styled.img`
     width: 30px;
     height: 30px;
 `
+
+export const ContainerButtons = styled(Col)`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row;
+    flex: 1;
+`
+
+export const ContainerButtonRightSide = styled(Col)``

@@ -17,7 +17,13 @@ export const InputPersonalized = styled(Input)<any>`
     font-style: italic;
     font-weight: 400;
     margin-bottom: ${(props) =>
-        props.withMB ? props.withMB : props.errorMessage ? 0 : 20}px;
+        props.withMB
+            ? props.withMB
+            : props.withoutMB
+            ? 0
+            : props.errorMessage
+            ? 0
+            : 20}px;
 
     width: ${(props) => (props.width ? props.width : '40vw')};
 

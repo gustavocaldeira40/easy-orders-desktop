@@ -15,136 +15,119 @@ import HeaderDefault from 'components/HeaderDefault'
 import DrawerComponent from 'components/Drawer'
 import { Drawer } from 'antd'
 import {
-    AffixPersonality,
-    Container,
-    ContainerCenter,
-    ContainerContent,
-    ContainerItems,
-    ContainerLeft,
-    ContainerRight,
-    IconItems,
-    ImageFloatingButton,
-    ImageRight,
-    TextDescriptionScreen,
-    TextItems,
+  AffixPersonality,
+  Container,
+  ContainerCenter,
+  ContainerContent,
+  ContainerItems,
+  ContainerLeft,
+  ContainerRight,
+  IconItems,
+  ImageFloatingButton,
+  ImageRight,
+  TextDescriptionScreen,
+  TextItems,
 } from './style'
 
 const Clients: React.FC = () => {
-    /*
-     *   CONTEXT
-     */
-    const { options } = useContext(DataContext)
+  /*
+   *   CONTEXT
+   */
+  const { options } = useContext(DataContext)
 
-    /*
-     *   REFS
-     */
+  /*
+   *   REFS
+   */
 
-    /*
-     *   STATES
-     */
-    const [showInformation, setShowInformation] = useState(false)
+  /*
+   *   STATES
+   */
+  const [showInformation, setShowInformation] = useState(false)
 
-    const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false)
 
-    /*
-     *   HOOKS
-     */
+  /*
+   *   HOOKS
+   */
 
-    /*
-     *   LAYOUT
-     */
+  /*
+   *   LAYOUT
+   */
 
-    /*
-     *   FORMIK
-     */
+  /*
+   *   FORMIK
+   */
 
-    /*
-     *   FUNCTIONS
-     */
+  /*
+   *   FUNCTIONS
+   */
 
-    /*
-     *   EFFECTS
-     */
+  /*
+   *   EFFECTS
+   */
 
-    return (
-        <>
-            {options.selected === 'clients' && (
-                <Container xl={12}>
-                    <Header
-                        withRightSide
-                        logoOnLeft
-                        titleOneWord="Register "
-                        titleSecondWord="Clients"
-                    />
-                    <ContainerCenter>
-                        <HeaderDefault
-                            titleMain="Welcome Again"
-                            showInformation={showInformation}
-                            setShowInformation={setShowInformation}
-                            withMenu
-                        />
+  return (
+    <>
+      <Container xl={12}>
+        <Header
+          withRightSide
+          logoOnLeft
+          titleOneWord="Register "
+          titleSecondWord="Clients"
+        />
+        <ContainerCenter>
+          <HeaderDefault
+            titleMain="Welcome Again"
+            showInformation={showInformation}
+            setShowInformation={setShowInformation}
+            withMenu
+          />
 
-                        <ContainerContent>
-                            <ContainerLeft>
-                                <TextDescriptionScreen>
-                                    You can register your customers after that
-                                    place their orders
-                                </TextDescriptionScreen>
+          <ContainerContent>
+            <ContainerLeft>
+              <TextDescriptionScreen>
+                You can register your customers after that place their orders
+              </TextDescriptionScreen>
 
-                                <ContainerItems margin="50px">
-                                    <IconItems src={AddIcon} alt="add icon" />
-                                    <TextItems>
-                                        Register with just some data
-                                    </TextItems>
-                                </ContainerItems>
-                                <ContainerItems>
-                                    <IconItems src={ListIcon} alt="list icon" />
-                                    <TextItems>
-                                        Track your customers and the options
-                                        below
-                                    </TextItems>
-                                </ContainerItems>
-                                <ContainerItems>
-                                    <IconItems src={EditIcon} alt="edit icon" />
-                                    <TextItems>
-                                        Edit easily and quickly
-                                    </TextItems>
-                                </ContainerItems>
-                                <ContainerItems>
-                                    <IconItems
-                                        src={MoreIcon}
-                                        alt="much more icon"
-                                    />
-                                    <TextItems>And much more...</TextItems>
-                                </ContainerItems>
-                            </ContainerLeft>
-                            <ContainerRight>
-                                <ImageRight
-                                    src={WomanImage}
-                                    alt="woman image"
-                                />
-                            </ContainerRight>
-                        </ContainerContent>
+              <ContainerItems margin="50px">
+                <IconItems src={AddIcon} alt="add icon" />
+                <TextItems>Register with just some data</TextItems>
+              </ContainerItems>
+              <ContainerItems>
+                <IconItems src={ListIcon} alt="list icon" />
+                <TextItems>
+                  Track your customers and the options below
+                </TextItems>
+              </ContainerItems>
+              <ContainerItems>
+                <IconItems src={EditIcon} alt="edit icon" />
+                <TextItems>Edit easily and quickly</TextItems>
+              </ContainerItems>
+              <ContainerItems>
+                <IconItems src={MoreIcon} alt="much more icon" />
+                <TextItems>And much more...</TextItems>
+              </ContainerItems>
+            </ContainerLeft>
+            <ContainerRight>
+              <ImageRight src={WomanImage} alt="woman image" />
+            </ContainerRight>
+          </ContainerContent>
 
-                        {visible !== true && (
-                            <AffixPersonality>
-                                <ImageFloatingButton
-                                    src={MoreFloatingIcon}
-                                    alt="floating button for see more"
-                                    onClick={() => setVisible(!visible)}
-                                />
-                            </AffixPersonality>
-                        )}
-                    </ContainerCenter>
+          {visible !== true && (
+            <AffixPersonality>
+              <ImageFloatingButton
+                src={MoreFloatingIcon}
+                alt="floating button for see more"
+                onClick={() => setVisible(!visible)}
+              />
+            </AffixPersonality>
+          )}
+        </ContainerCenter>
 
-                    <DrawerComponent
-                        visible={visible}
-                        onClose={() => setVisible(false)}
-                    />
-                </Container>
-            )}
-        </>
-    )
+        <DrawerComponent visible={visible} onClose={() => setVisible(false)} />
+      </Container>
+    </>
+  )
 }
 
 export default Clients
