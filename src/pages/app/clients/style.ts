@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import BGScreen from 'assets/images/bg-lines.png'
 
-const { Title, Text } = Typography
+const { Text } = Typography
 
 export const Container = styled(Col)`
     background-image: url(${BGScreen});
@@ -12,6 +12,7 @@ export const Container = styled(Col)`
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
+    height: 100vh;
 `
 
 export const ContainerCenter = styled(Col)`

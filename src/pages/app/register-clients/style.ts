@@ -10,6 +10,7 @@ export const Container = styled(Col)`
     background-image: url(${BGScreen});
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
 `
 
 export const Separator = styled(Col)`
