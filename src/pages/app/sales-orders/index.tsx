@@ -2,13 +2,14 @@ import BlackContainer from 'components/BlackContainer'
 import Header from 'components/Header'
 import React, { useContext, useState } from 'react'
 
-import ManImage from 'assets/images/clients.png'
+import WomanImage from 'assets/images/woman.png'
 import AddIcon from 'assets/icons/add.png'
 import EditIcon from 'assets/icons/edit.png'
 import ListIcon from 'assets/icons/list.png'
 import MoreIcon from 'assets/icons/more.png'
 import MoreFloatingIcon from 'assets/icons/more-floating.png'
 
+import Menu from 'components/Menu'
 import { DataContext } from 'context/appContext'
 import HeaderDefault from 'components/HeaderDefault'
 import DrawerComponent from 'components/Drawer'
@@ -28,7 +29,7 @@ import {
   TextItems,
 } from './style'
 
-const Clients: React.FC = () => {
+const SalesOrders: React.FC = () => {
   /*
    *   CONTEXT
    */
@@ -42,20 +43,19 @@ const Clients: React.FC = () => {
    *   STATES
    */
   const [showInformation, setShowInformation] = useState(false)
-
-  const [visible, setVisible] = useState(false)
   const [itemDrawer, setItemDrawer] = useState([
     {
-      title: 'New Client',
-      path: '/register-clients',
+      title: 'New Orders',
+      path: '/register-orders',
       icon: AddIcon,
     },
     {
-      title: 'List Clients',
-      path: '/list-clients',
+      title: 'List Orders',
+      path: '/list-orders',
       icon: ListIcon,
     },
   ])
+  const [visible, setVisible] = useState(false)
 
   /*
    *   HOOKS
@@ -120,7 +120,7 @@ const Clients: React.FC = () => {
               </ContainerItems>
             </ContainerLeft>
             <ContainerRight>
-              <ImageRight src={ManImage} alt="woman image" />
+              <ImageRight src={WomanImage} alt="woman image" />
             </ContainerRight>
           </ContainerContent>
 
@@ -145,4 +145,4 @@ const Clients: React.FC = () => {
   )
 }
 
-export default Clients
+export default SalesOrders
