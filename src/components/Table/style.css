@@ -1,0 +1,24 @@
+.table {
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: '#00000055';
+}
+
+.table-pagination {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    font-family: Roboto;
+}
+
+.icon-pagination {
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    cursor: pointer;
+}
